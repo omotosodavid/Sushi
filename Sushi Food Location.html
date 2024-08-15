@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="sushi-cart" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location</title>
+    <link rel="stylesheet" href="Sushi_Food.css" />
+    <link rel="shortcut icon" href="img_src/S..png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <img src="img_src/S..png" alt="Sushi-food-app-logo" />
+      <h3>ushi Food</h3>
+    </nav>
+    <div class="menu">
+      <div class="options">
+        <a href="Menu.html" class="adjust" title="Menu">
+          <img src="img_src/S..png" alt="Sushi-food-app-logo" />
+        </a>
+        <a href="index.html" class="adjust" title="Home">
+          <img src="img_src/Vector.png" alt="home_page" />
+        </a>
+        <a href="Food.html" class="adjust" title="Food">
+          <img
+            src="img_src/restaurant_menu_24px - Copy.png"
+            alt="restaurant_menu"
+          />
+        </a>
+        <a href="Cart.html" class="adjust" title="Cart">
+          <div style="position: relative">
+            <img src="img_src/shopping_cart_24px.png" alt="shopping_cart" />
+            <div class="Cartamount">0</div>
+          </div>
+        </a>
+        <a href="Sushi Food Location.html" class="adjust" title="Location">
+          <img src="img_src/place_24px.png" alt="location" />
+        </a>
+        <a href="" class="adjust" title="Exit">
+          <img src="img_src/Vector2.png" alt="download" />
+        </a>
+      </div>
+      <div class="var-Sushi location">
+        <h1>Our Location</h1>
+        <div class="sus-caption">
+          <img
+            src="https://www.commercialinteriordesign.com/cloud/2021/07/07/eZBwrwqO-pcUo255A-2-1200x800.jpg"
+            alt="An image of our restaurant"
+          />
+          <h2>The interior of our restaurant</h2>
+        </div>
+        <div class="des">
+          <h3>
+            <i
+              >Flat A1, Banana Island Apartments, Igbo -efon, lekki. Lagos,
+              Nigeria</i
+            >
+          </h3>
+          <a
+            rel="noopener"
+            href="https://www.google.com/maps/place/Banana+Island+Apartments/@6.4290544,3.5238486,1683m/data=!3m1!1e3!4m5!3m4!1s0x0:0xe13e010a3d1789b4!8m2!3d6.42671!4d3.5285875"
+            target="_blank"
+            >Check Google map
+            <img
+              width="20"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/1428px-Google_Maps_icon_%282020%29.svg.png"
+              alt="goggle-map"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const ITEMNO = document.querySelector(".Cartamount");
+      let parsedData = JSON.parse(localStorage.getItem("sushiId"));
+      if (localStorage.hasOwnProperty("sushiId")) {
+        ITEMNO.innerText = parsedData.length;
+      }
+    </script>
+  </body>
+</html>

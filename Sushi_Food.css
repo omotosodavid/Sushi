@@ -1,0 +1,546 @@
+/* General style */
+:root {
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --Home-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --default-color: #f1d5bb;
+  --black: #000;
+  --white: #fff;
+  --fig-color: #f3b57b;
+  --opt-hover: #7a6551;
+  --text-border: rgb(88, 87, 87);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 5px 0 0;
+}
+nav img {
+  height: 50px;
+  width: 50px;
+}
+nav h3 {
+  margin-top: 24px;
+  color: black;
+  font-family: var(--font-family);
+  text-decoration: underline overline wavy black;
+}
+.menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 3px;
+  width: unset;
+}
+.options {
+  width: 6.88em;
+  height: 34.38em;
+  background-color: #0c0b0b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+  position: fixed;
+  row-gap: 10px;
+}
+.adjust {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+  display: grid;
+  place-content: center;
+  margin: auto;
+}
+.adjust:hover {
+  background-color: var(--opt-hover);
+  width: 100%;
+  height: 100px;
+}
+.var-Sushi > h1 {
+  font-family: var(--font-family);
+  letter-spacing: 0.2px;
+  border-bottom: 3px solid var(--default-color);
+  word-spacing: 1.5px;
+  font-weight: 400;
+  max-width: 200px;
+}
+.var-Sushi {
+  margin: 0 3em 0 9em;
+  width: 100%;
+}
+.bold {
+  font-weight: 600;
+}
+
+/* Sushi Home style */
+.Sushi-Home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./img_src/restaurant\ 1.png);
+  height: 100vh;
+  width: auto;
+  color: var(--white);
+  transition: all 0.8s;
+  animation: sushi-home 20s ease-in-out infinite;
+  font-family: var(--Home-font);
+}
+@keyframes sushi-home {
+  0% {
+    background-image: url(img_src/restaurant\ 1.png);
+  }
+  20% {
+    background-image: url(img_src/colorful-sushi.jpg);
+  }
+  40% {
+    background-image: url(img_src/sushi-2853382__340.jpg);
+  }
+  60% {
+    background-image: url(img_src/rice-filled-sushi.jpeg);
+  }
+  80% {
+    background-image: url(img_src/fav-sushi.jpg);
+  }
+  100% {
+    background-image: url(img_src/restaurant\ 1.png);
+  }
+}
+.Sushi-Home h1 {
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 2.5em;
+}
+.Sushi-Home p {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  margin-top: 20px;
+}
+.landing-button {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.same-btn {
+  padding: 10px 60px;
+  font-size: 2em;
+  font-family: var(--font-family);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 1px solid var(--white);
+}
+.same-btn:active {
+  background-color: #cac7c7f3;
+  border: 1px solid #cac7c7f3;
+}
+.same-btn:hover {
+  background-color: #d4d2d4f3;
+  border: 1px solid #d4d2d4f3;
+}
+.content {
+  position: relative;
+  top: 40%;
+}
+/* End of sushi home style*/
+
+/* Food style */
+.sushi_imgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2em auto 0;
+  gap: 2em 1em;
+  width: 100%;
+}
+figure {
+  background-color: var(--fig-color);
+  padding: 5px 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 8px 10px 0px #0000004d;
+  width: 23.2em;
+}
+figcaption {
+  font-family: var(--font-family);
+  text-align: justify;
+}
+figcaption > figcaption:last-of-type {
+  padding-bottom: 15px;
+}
+#load-more {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  padding: 10px 25px;
+  position: relative;
+  left: 48%;
+  text-align: center;
+  margin-top: 4em;
+}
+.block {
+  display: block;
+}
+.none {
+  display: none;
+  transition: display 0.8s;
+}
+.block:hover .none {
+  display: flex;
+}
+.block:hover #load-more {
+  display: none;
+}
+
+figure img {
+  width: 100%;
+  height: 20.8em;
+  object-fit: cover;
+}
+.price-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-cart {
+  border-radius: 12px 12px 0 0;
+  background-color: var(--black);
+  font-size: 17px;
+  color: var(--white);
+  padding: 5px;
+  outline: 0;
+  border: 0;
+  letter-spacing: 0.9px;
+  transition: background-color 300ms, color 300ms, filter 300ms;
+}
+.add-cart:disabled {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: grey;
+}
+.add-cart:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  filter: blur(0.5px);
+  cursor: pointer;
+}
+footer {
+  font-family: var(--font-family);
+  margin: 3.7rem 0 12px;
+}
+
+/* End of restaurant style */
+
+/* Menu style */
+.about h1 {
+  max-width: 258px;
+  margin: 7px 0 0 30px;
+}
+.insight {
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin-top: 1.5em;
+}
+.images {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.text {
+  border: 2px solid var(--text-border);
+  width: 55%;
+  background-color: var(--default-color);
+  border-radius: 5px;
+  padding: 0 10px 5px;
+  font-size: 1.2em;
+  line-height: 1.45;
+  font-family: var(--font-family);
+}
+.text p {
+  text-align: justify;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.text > h2 {
+  margin: 0 0 -1em;
+}
+.right {
+  padding-left: 21px;
+  font-weight: bold;
+}
+.deco img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.dark-bg {
+  background-color: var(--black);
+  padding: 20px 10px 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+.dark-bg h3 {
+  color: var(--fig-color);
+  text-align: center;
+  font-size: 1.5em;
+  margin: 15px;
+  font-family: var(--font-family);
+}
+.dark-bg > h3:first-of-type {
+  margin-top: 0;
+  font-size: 1.6em;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+  padding-right: 3px;
+}
+.social-media a {
+  font-size: 1.3em;
+  color: var(--fig-color);
+}
+
+/* End of Menu style */
+
+/* Cart style */
+.my-cart {
+  font-family: var(--font-family);
+}
+
+.my-cart h1 {
+  width: 100px;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.total {
+  display: flex;
+  gap: 5px;
+  position: fixed;
+  right: 1.5%;
+  top: 1%;
+}
+.items {
+  display: grid;
+  place-items: center;
+}
+ul {
+  background-color: var(--fig-color);
+  position: relative;
+  padding: 5px 10px 0;
+  width: 33rem;
+  border-radius: 10px;
+  list-style: none;
+  margin: 0.2em 0 1em;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+ul li {
+  border-bottom: 2px solid var(--text-border);
+  margin-bottom: 0.9em;
+}
+ul li:last-of-type {
+  border-bottom: 0 !important;
+  margin: 0;
+}
+ul li .sus-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+}
+.sus-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.fa-times {
+  font-size: 1.4rem;
+  position: absolute;
+  right: 1%;
+  top: 5px;
+  cursor: pointer;
+}
+.fa-times:hover {
+  color: #575757;
+}
+.info {
+  margin: 1em 0 2em;
+}
+.price-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alter-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 57px;
+}
+.quantity {
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 5px;
+}
+.fa-plus {
+  color: rgb(45, 148, 45);
+  transition: 0.5s;
+}
+.fa-plus:hover {
+  filter: blur(0.8px);
+  opacity: 0.8;
+  cursor: pointer;
+}
+.fa-minus {
+  color: red;
+  transition: 0.5s;
+}
+.fa-minus:hover {
+  filter: blur(0.8px);
+  opacity: 0.8;
+  cursor: pointer;
+}
+.Cartamount {
+  background-color: red;
+  color: var(--white);
+  border-radius: 5px;
+  position: absolute;
+  top: -21%;
+  right: -21%;
+  padding: 1px 3.5px;
+  text-align: center;
+  text-decoration: none;
+}
+/* End of cart style */
+
+/* Sushi Location style */
+.location h1 {
+  max-width: 15rem;
+  margin-bottom: 1em;
+  font-size: 2.5rem;
+}
+
+.sus-caption img {
+  width: 100%;
+  height: 100%;
+}
+.sus-caption h2 {
+  text-align: center;
+  font-family: var(--font-family);
+  margin: 5px 0 9px;
+}
+.des {
+  background-color: var(--black);
+  color: var(--default-color);
+  width: 100%;
+  padding: 1em 0;
+}
+.des a {
+  color: var(--white);
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+  left: 44%;
+  text-align: center;
+  width: inherit;
+}
+.des a:hover {
+  color: var(--default-color);
+}
+.des h3 {
+  font-family: var(--font-family);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Responsive Css*/
+/* for width 1030 */
+@media (max-width: 1030px) {
+  .menu {
+    flex-direction: column;
+    margin: auto 12px;
+    align-items: center;
+  }
+  .options {
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    width: 34.5em;
+    height: 6.88em;
+    margin-top: 18px;
+    z-index: 999;
+  }
+  .var-Sushi {
+    margin: 10px 0 0;
+  }
+  .adjust:hover {
+    width: 110px;
+    height: 100%;
+  }
+}
+@media (max-width: 830px) {
+  .images {
+    flex-direction: column;
+  }
+  .text,
+  .deco {
+    width: 100%;
+  }
+  .images:nth-child(2),
+  .images:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+  #load-more {
+    left: 42%;
+  }
+}
+@media (max-width: 470px) {
+  figure {
+    width: 100%;
+  }
+  #load-more {
+    left: 34%;
+  }
+  .about h1 {
+    margin-left: 0;
+  }
+  ul {
+    width: 100%;
+  }
+  .item {
+    justify-content: center;
+  }
+  .sus-desc {
+    text-align: center;
+    width: 100%;
+  }
+  .dark-bg > h3:first-of-type {
+    font-size: 1.3rem;
+  }
+  .dark-bg > h3 {
+    font-size: 1.2em;
+  }
+}

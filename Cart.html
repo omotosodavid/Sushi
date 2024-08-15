@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="sushi-cart" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="Sushi_Food.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="img_src/S..png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <img src="img_src/S..png" alt="Sushi-food-app-logo" />
+      <h3>ushi Food</h3>
+    </nav>
+    <div class="menu">
+      <div class="options">
+        <a href="Menu.html" class="adjust" title="Menu">
+          <img src="img_src/S..png" alt="Sushi-food-app-logo" />
+        </a>
+        <a href="index.html" class="adjust" title="Home">
+          <img src="img_src/Vector.png" alt="home_page" />
+        </a>
+        <a href="Food.html" class="adjust" title="Food">
+          <img
+            src="img_src/restaurant_menu_24px - Copy.png"
+            alt="restaurant_menu"
+          />
+        </a>
+        <a href="Cart.html" class="adjust" title="Cart">
+          <div style="position: relative">
+            <img src="img_src/shopping_cart_24px.png" alt="shopping_cart" />
+            <div class="Cartamount">0</div>
+          </div>
+        </a>
+        <a href="Sushi Food Location.html" class="adjust" title="Location">
+          <img src="img_src/place_24px.png" alt="location" />
+        </a>
+        <a href="" class="adjust" title="Exit">
+          <img src="img_src/Vector2.png" alt="download" />
+        </a>
+      </div>
+      <div class="var-Sushi my-cart">
+        <h1>Cart</h1>
+        <div class="total">
+          <h2>Total:</h2>
+          <span
+            style="font-weight: bold; font-size: 1.5em; margin-right: -0.2em"
+            >$</span
+          >
+          <h2 class="total-price">0</h2>
+        </div>
+        <div class="items"></div>
+      </div>
+    </div>
+    <script>
+      const ITEMNO = document.querySelector(".Cartamount");
+      setInterval(() => {
+        let parsedData = JSON.parse(localStorage.getItem("sushiId"));
+        if (localStorage.hasOwnProperty("sushiId")) {
+          ITEMNO.innerText = parsedData.length;
+        }
+      });
+    </script>
+    <script type="module" src="cart.js"></script>
+  </body>
+</html>
