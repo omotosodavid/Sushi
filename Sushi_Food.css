@@ -85,7 +85,6 @@ nav h3 {
 .Sushi-Home {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(./img_src/restaurant\ 1.png);
   height: 100vh;
   width: auto;
   color: var(--white);
@@ -141,10 +140,7 @@ nav h3 {
   margin-top: 10px;
   border-radius: 3px;
   border: 1px solid var(--white);
-}
-.same-btn:active {
-  background-color: #cac7c7f3;
-  border: 1px solid #cac7c7f3;
+  cursor: pointer;
 }
 .same-btn:hover {
   background-color: #d4d2d4f3;
@@ -180,28 +176,20 @@ figcaption {
 figcaption > figcaption:last-of-type {
   padding-bottom: 15px;
 }
-#load-more {
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+#more,#less {
   background-color: var(--black);
   color: var(--white);
   border: 1px solid var(--black);
   padding: 10px 25px;
-  position: relative;
-  left: 48%;
   text-align: center;
   margin-top: 4em;
-}
-.block {
-  display: block;
-}
-.none {
-  display: none;
-  transition: display 0.8s;
-}
-.block:hover .none {
-  display: flex;
-}
-.block:hover #load-more {
-  display: none;
+  cursor: pointer;
+  transition: all 200ms;
 }
 
 figure img {
@@ -513,16 +501,10 @@ ul li .sus-img {
   .images:nth-child(4) {
     flex-direction: column-reverse;
   }
-  #load-more {
-    left: 42%;
-  }
 }
 @media (max-width: 470px) {
   figure {
     width: 100%;
-  }
-  #load-more {
-    left: 34%;
   }
   .about h1 {
     margin-left: 0;

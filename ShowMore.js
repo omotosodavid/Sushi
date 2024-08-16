@@ -1,7 +1,7 @@
 // ? Importation
 import { sushiData, cart } from "./GeneralExport.js";
 
-let sushy = document.getElementById("iod");
+let sushy = document.getElementById("moreFood");
 
 // * Iterating through sushiData Array
 const generateSecondShopData = () => {
@@ -29,4 +29,23 @@ const generateSecondShopData = () => {
   cart();
 };
 
+const showMore=()=>{
+  const moreButton = document.getElementById("more");
+  const moreFoodContainer = document.getElementById("moreFood");
+  const lessButton= document.getElementById("less")
+  
+  moreButton.addEventListener("click",()=>{
+    moreFoodContainer.style.display="flex"
+    moreButton.style.display="none"
+    lessButton.style.display="block"
+  })
+
+  lessButton.addEventListener("click",()=>{
+    moreFoodContainer.style.display="none"
+    moreButton.style.display="block"
+    lessButton.style.display="none"
+  })
+}
+
 generateSecondShopData();
+showMore()
