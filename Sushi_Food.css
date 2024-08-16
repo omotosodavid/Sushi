@@ -15,6 +15,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 nav {
   display: flex;
   gap: 6px;
@@ -51,19 +54,17 @@ nav h3 {
   margin-top: 10px;
   position: fixed;
   row-gap: 10px;
+  overflow: hidden;
 }
 .adjust {
-  height: 60px;
-  width: 60px;
-  object-fit: contain;
+  height: 105px;
   display: grid;
   place-content: center;
   margin: auto;
+  width: 100%;
 }
 .adjust:hover {
   background-color: var(--opt-hover);
-  width: 100%;
-  height: 100px;
 }
 .var-Sushi > h1 {
   font-family: var(--font-family);
@@ -85,6 +86,8 @@ nav h3 {
 .Sushi-Home {
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: none;
+  background-color: #000000;
   height: 100vh;
   width: auto;
   color: var(--white);
@@ -176,12 +179,14 @@ figcaption {
 figcaption > figcaption:last-of-type {
   padding-bottom: 15px;
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
-#more,#less {
+#more,
+#less,
+.checkOut {
   background-color: var(--black);
   color: var(--white);
   border: 1px solid var(--black);
@@ -227,7 +232,7 @@ footer {
   margin: 3.7rem 0 12px;
 }
 
-/* End of restaurant style */
+/* End of Food style */
 
 /* Menu style */
 .about h1 {
@@ -310,7 +315,6 @@ footer {
 .my-cart {
   font-family: var(--font-family);
 }
-
 .my-cart h1 {
   width: 100px;
   letter-spacing: 2px;
@@ -327,6 +331,7 @@ footer {
 .items {
   display: grid;
   place-items: center;
+  position: relative;
 }
 ul {
   background-color: var(--fig-color);
@@ -338,7 +343,7 @@ ul {
   margin: 0.2em 0 1em;
 }
 .item {
-  position:relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -431,7 +436,9 @@ ul li .sus-img {
   margin-bottom: 1em;
   font-size: 2.5rem;
 }
-
+.sus-caption {
+  margin-top: 3em;
+}
 .sus-caption img {
   width: 100%;
   height: 100%;
@@ -441,28 +448,24 @@ ul li .sus-img {
   font-family: var(--font-family);
   margin: 5px 0 9px;
 }
-.des {
-  background-color: var(--black);
-  color: var(--default-color);
+/* Check-out style */
+.congratsImg {
+  position: fixed;
+  top: 0;
+  transform: rotateX(180deg);
+  height: 100%;
   width: 100%;
-  padding: 1em 0;
+  transition: all 2s;
+  animation: close 3s linear;
 }
-.des a {
-  color: var(--white);
-  font-size: 30px;
-  text-decoration: none;
-  position: relative;
-  left: 44%;
-  text-align: center;
-  width: inherit;
-}
-.des a:hover {
-  color: var(--default-color);
-}
-.des h3 {
-  font-family: var(--font-family);
-  text-align: center;
-  margin-bottom: 10px;
+@keyframes close {
+  from{
+    opacity: 100%;
+  }
+  to{
+    opacity: 10%;
+  }
+  
 }
 
 /* Responsive Css*/
@@ -485,8 +488,8 @@ ul li .sus-img {
   .var-Sushi {
     margin: 10px 0 0;
   }
-  .adjust:hover {
-    width: 110px;
+  .adjust{
+    width: 113px;
     height: 100%;
   }
 }

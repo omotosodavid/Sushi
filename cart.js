@@ -41,7 +41,7 @@ function parsedResult() {
                  <h2 class="name">${name}</h2>
                  <p class="appreciation-msg">Thank you for choosing ${name}.
                      <br>
-                     we would give you a heads up when it's ready.
+                     We would give you a heads up when it's ready.
                  </p>
                  </div>
                  <div class="price-quantity" id=${id}>
@@ -63,7 +63,7 @@ function parsedResult() {
     });
   } else {
     items.innerHTML =
-      '<p style="margin-top:1em">Nothing to see here go back to the <a href="Food.html" rel="noopener">Food menu</a> and add to cart.</p>';
+      '<p style="margin-top:1em">Nothing to see here go back to the <a href="Food.html" rel="noopener">Food menu</a> and add to cart.</p><img style="height: 74.6vh; width: 100%;" src="img_src/confused.svg" alt="">';
   }
 }
 parsedResult();
