@@ -1,8 +1,5 @@
 // ? Importation
-import { sushiItems, cart } from "./GeneralExport.js";
-
-let basket = [];
-//JSON.parse(localStorage.getItem("Data"))||
+import { sushiItems } from "./GeneralExport.js";
 
 //* Fetching a tag from the dom
 let sushi = document.getElementById("idc");
