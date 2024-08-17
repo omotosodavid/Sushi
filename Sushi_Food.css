@@ -4,11 +4,11 @@
   --Home-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --default-color: #f1d5bb;
-  --black: #000;
+  --black: #000000;
   --white: #fff;
   --fig-color: #f3b57b;
   --opt-hover: #7a6551;
-  --text-border: rgb(88, 87, 87);
+  --text-border: #585757;
 }
 * {
   margin: 0;
@@ -32,7 +32,7 @@ nav h3 {
   margin-top: 24px;
   color: black;
   font-family: var(--font-family);
-  text-decoration: underline overline wavy black;
+  text-decoration: underline overline wavy var(--black);
 }
 .menu {
   display: flex;
@@ -87,11 +87,10 @@ nav h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: none;
-  background-color: #000000;
+  background-color: var(--black);
   height: 100vh;
-  width: auto;
+  width: 100%;
   color: var(--white);
-  transition: all 0.8s;
   animation: sushi-home 20s ease-in-out infinite;
   font-family: var(--Home-font);
 }
@@ -132,8 +131,8 @@ nav h3 {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
-
 .same-btn {
   padding: 10px 60px;
   font-size: 2em;
@@ -150,8 +149,9 @@ nav h3 {
   border: 1px solid #d4d2d4f3;
 }
 .content {
-  position: relative;
-  top: 40%;
+  height: 100%;
+  display: grid;
+  place-content: center;
 }
 /* End of sushi home style*/
 
@@ -169,7 +169,7 @@ figure {
   background-color: var(--fig-color);
   padding: 5px 5px 0;
   border-radius: 5px;
-  box-shadow: 0 8px 10px 0px #0000004d;
+  box-shadow: 0 8px 10px 0px var(--black);
   width: 23.2em;
 }
 figcaption {
@@ -193,6 +193,7 @@ figcaption > figcaption:last-of-type {
   padding: 10px 25px;
   text-align: center;
   margin-top: 4em;
+  margin-bottom: 1.5em;
   cursor: pointer;
   transition: all 200ms;
 }
@@ -268,17 +269,18 @@ footer {
   letter-spacing: 0.5px;
 }
 .text > h2 {
-  margin: 0 0 -1em;
+  margin: 0 0 -0.5em;
 }
-.right {
-  padding-left: 21px;
-  font-weight: bold;
+.nutrients {
+  width: 15em;
+  margin-top: 0.4em;
 }
 .deco img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   border-radius: 6px;
+  image-rendering: pixelated;
 }
 .dark-bg {
   background-color: var(--black);
@@ -287,7 +289,7 @@ footer {
   border-radius: 5px;
 }
 .dark-bg h3 {
-  color: var(--fig-color);
+  color: var(--white);
   text-align: center;
   font-size: 1.5em;
   margin: 15px;
@@ -306,9 +308,12 @@ footer {
 }
 .social-media a {
   font-size: 1.3em;
+  color: var(--white);
+  transition: color 200ms;
+}
+.social-media a:hover {
   color: var(--fig-color);
 }
-
 /* End of Menu style */
 
 /* Cart style */
@@ -332,6 +337,15 @@ footer {
   display: grid;
   place-items: center;
   position: relative;
+  padding-bottom: 2em;
+}
+.confirmBtn {
+  position: absolute;
+  bottom: -3.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ul {
   background-color: var(--fig-color);
@@ -360,8 +374,8 @@ ul li:last-of-type {
   margin: 0;
 }
 ul li .sus-img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   margin-bottom: 5px;
 }
 .sus-img > img {
@@ -459,13 +473,12 @@ ul li .sus-img {
   animation: close 3s linear;
 }
 @keyframes close {
-  from{
+  from {
     opacity: 100%;
   }
-  to{
+  to {
     opacity: 10%;
   }
-  
 }
 
 /* Responsive Css*/
@@ -480,16 +493,16 @@ ul li .sus-img {
     position: sticky;
     top: 0;
     flex-direction: row;
-    width: 34.5em;
+    width: 100%;
     height: 6.88em;
     margin-top: 18px;
-    z-index: 999;
+    z-index: 20;
   }
   .var-Sushi {
     margin: 10px 0 0;
   }
-  .adjust{
-    width: 113px;
+  .adjust {
+    width: 118px;
     height: 100%;
   }
 }
@@ -507,11 +520,27 @@ ul li .sus-img {
   }
 }
 @media (max-width: 470px) {
+  nav {
+    position: relative;
+    right: 26%;
+  }
+  .adjust {
+    width: 100%;
+  }
+  .adjust img {
+    scale: 0.8;
+  }
+  .nutrients {
+    width: 100%;
+  }
   figure {
     width: 100%;
   }
   .about h1 {
     margin-left: 0;
+  }
+  .deco img {
+    height: 400px;
   }
   ul {
     width: 100%;
@@ -528,5 +557,8 @@ ul li .sus-img {
   }
   .dark-bg > h3 {
     font-size: 1.2em;
+  }
+  .congratsImg {
+    width: auto;
   }
 }

@@ -8,25 +8,37 @@
     <link rel="stylesheet" href="Sushi_Food.css" />
     <link rel="shortcut icon" href="img_src/S..png" type="image/x-icon" />
   </head>
-  <body><img class="congratsImg" src="https://media.tenor.com/nVsVEfzCGQMAAAAi/confetti.gif" alt="">
+  <body>
+    <img class="congratsImg" src="img_src/confetti.gif" alt="" />
     <nav>
       <img src="img_src/S..png" alt="Sushi-food-app-logo" />
       <h3>ushi Food</h3>
     </nav>
-<section style="height:86dvh; margin-top: 2.5em; overflow: hidden;">
-    <p style="text-align: center; font-size: 2.5em; font-weight: bold; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <section style="height: 86dvh; margin-top: 2.5em; overflow: hidden">
+      <p
+        style="
+          text-align: center;
+          font-size: 2.5em;
+          font-weight: bold;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+        "
+      >
         Congratulations!! Your order is on its way.
-    </p>
-        <img style="width: 100%; height: 100%;" src="img_src/ordering.svg" alt="Order delivery svg">
-</section>
+      </p>
+      <img
+        style="width: 100%; height: 100%"
+        src="img_src/ordering.svg"
+        alt="Order delivery svg"
+      />
+    </section>
     <script>
-     const congratsImg=document.querySelector(".congratsImg")
-        setTimeout(() => {
-        congratsImg.style.display="none";
-        localStorage.clear()
-        location.replace("./index.html")
-        }, 3000);
-
+      const congratsImg = document.querySelector(".congratsImg");
+      setTimeout(() => {
+        congratsImg.style.display = "none";
+        localStorage.clear();
+        location.replace("./index.html");
+      }, 3000);
     </script>
   </body>
 </html>
