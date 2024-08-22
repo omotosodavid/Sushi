@@ -84,15 +84,14 @@ nav h3 {
 
 /* Sushi Home style */
 .Sushi-Home {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: none;
-  background-color: var(--black);
   height: 100vh;
   width: 100%;
   color: var(--white);
   animation: sushi-home 20s ease-in-out infinite;
   font-family: var(--Home-font);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 @keyframes sushi-home {
   0% {
@@ -523,6 +522,7 @@ ul li .sus-img {
   nav {
     position: relative;
     right: 26%;
+    margin-bottom: 1em;
   }
   .adjust {
     width: 100%;
@@ -530,10 +530,14 @@ ul li .sus-img {
   .adjust img {
     scale: 0.8;
   }
-  .nutrients {
-    width: 100%;
+  .sushi_imgs{
+    gap:3.5em 0;
   }
-  figure {
+  figure{
+    width: 100%;
+    box-shadow: -1px 3px 20px #1a1919;
+  }
+  .nutrients {
     width: 100%;
   }
   .about h1 {
